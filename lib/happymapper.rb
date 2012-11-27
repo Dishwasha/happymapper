@@ -99,7 +99,7 @@ module HappyMapper
 
       xpath = root ? '/' : './/'
       xpath += "#{DEFAULT_NS}:" if namespace
-      xpath += tag_name
+      xpath += options[:tag] || tag_name
 
       nodes = node.find(xpath, Array(namespace))
       collection = nodes.collect do |n|

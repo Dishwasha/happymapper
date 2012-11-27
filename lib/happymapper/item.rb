@@ -51,7 +51,7 @@ module HappyMapper
             end
           end
         else
-          constant.parse(node, options)
+          constant.parse(node, {:tag => @tag}.merge(options))
         end
       end
     end
